@@ -1,3 +1,47 @@
+# Angular & TypeScript - Angular Pipes App
+
+---
+
+# Temas puntuales de la sección
+
+### ¿Qué veremos en esta sección?
+
+En esta sección veremos temas sobre Pipes y transformación visual de la data. También se usará PrimeNG para la UI donde PrimeNG es un paquete de componentes estilizados que contienen funcionalidades basadas en Angular para crear aplicaciones elegantes, hermosas y funcionales rápidamente. PrimeNG no es el único para la UI, hay muchos pero la mayoría funcionan de formas similares, importando módulos y trabajando de formas similares.
+
+Pipes Angular:
+
+- Uppercase
+- Lowercase
+- TitleCase
+- Date
+- Decimal
+- Currency
+- Percent
+- i18nSelect
+- i18Plural
+- KeyValue
+- Json
+- Async
+
+UI:
+
+- PrimeNG
+- Módulo especializado para módulos de PrimeNG
+
+### \* PASOS A REALIZAR:
+
+1. ejemplo
+2. ejemplo
+3. ejemplo
+
+### \* RECURSOS A USAR:
+
+- ejemplo
+- ejemplo
+- ejemplo
+
+---
+
 # AngularPipesApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
