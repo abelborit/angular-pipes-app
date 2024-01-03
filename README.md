@@ -6,9 +6,11 @@
 
 ### ¿Qué veremos en esta sección?
 
-En esta sección veremos temas sobre Pipes y transformación visual de la data. También se usará PrimeNG para la UI donde PrimeNG es un paquete de componentes estilizados que contienen funcionalidades basadas en Angular para crear aplicaciones elegantes, hermosas y funcionales rápidamente. PrimeNG no es el único para la UI, hay muchos pero la mayoría funcionan de formas similares, importando módulos y trabajando de formas similares.
+En esta sección veremos temas sobre Pipes y transformación visual de la data donde un Pipe es un objeto que permite transformar de manera visual la información que mostraremos en pantalla sin mutar la data real.
 
-Pipes Angular:
+También se usará PrimeNG para la UI donde PrimeNG es un paquete de componentes estilizados que contienen funcionalidades basadas en Angular para crear aplicaciones elegantes y funcionales rápidamente. PrimeNG no es el único para la UI, hay muchos pero la mayoría funcionan de formas similares, importando módulos y trabajando de formas similares.
+
+Pipes Angular (https://angular.io/api?query=pipe):
 
 - Uppercase
 - Lowercase
@@ -23,9 +25,9 @@ Pipes Angular:
 - Json
 - Async
 
-UI:
+PrimeNG:
 
-- PrimeNG
+- PrimeNG (v15.0.1)
 - Módulo especializado para módulos de PrimeNG
 
 ### \* PASOS A REALIZAR:
@@ -36,7 +38,9 @@ UI:
 
 ### \* RECURSOS A USAR:
 
-- ejemplo
+- PrimeNG (v15.0.1): https://primeng.org/
+  - `npm install primeng@15.0.1`
+  - `npm install primeicons@6.0.1`
 - ejemplo
 - ejemplo
 
