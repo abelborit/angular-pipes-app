@@ -41,6 +41,8 @@ PrimeNG:
 - PrimeNG (v15.0.1): https://www.primefaces.org/primeng-v14-lts/
   - `npm install primeng@15.0.1`
   - `npm install primeicons@6.0.1`
+- PrimeFlex (3.3.0): https://primeflex.org/
+  - `npm install primeflex@3.3.0`
 - ejemplo
 - ejemplo
 
