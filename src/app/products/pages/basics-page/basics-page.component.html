@@ -20,4 +20,52 @@
       {{ nameRandomStyle | titlecase }}
     </p-card>
   </div>
+
+  <div class="col-12">
+    <p-card header="Pipe: date">
+      <ul>
+        <li><strong>Current Date ➡️</strong> {{ currentDate }}</li>
+        <li>
+          <strong>Current Date | date ➡️</strong> {{ currentDate | date }}
+        </li>
+        <li>
+          <strong>Current Date | date : "short" ➡️</strong>
+          {{ currentDate | date : "short" }}
+        </li>
+        <li>
+          <strong>Current Date | date : "shortDate" ➡️</strong>
+          {{ currentDate | date : "shortDate" }}
+        </li>
+        <li>
+          <strong>Current Date | date : "long" ➡️</strong>
+          {{ currentDate | date : "long" }}
+        </li>
+        <li>
+          <strong>Current Date | date : "fullDate" ➡️</strong>
+          {{ currentDate | date : "fullDate" }}
+        </li>
+        <li>
+          <strong>Current Date | date : "MMMM" ➡️</strong>
+          {{ currentDate | date : "MMMM" }}
+        </li>
+        <li>
+          <strong>Current Date | date : "MMMM dd, yy" ➡️</strong>
+          {{ currentDate | date : "MMMM dd, yy" }}
+        </li>
+      </ul>
+
+      <hr />
+
+      <ul>
+        <li>
+          <strong>Current Date | date : "long" : "GMT-6" ➡️</strong>
+          {{ currentDate | date : "long" : "GMT-6" }}
+        </li>
+        <li>
+          <strong>Current Date | date : "long" : "GMT-4" ➡️</strong>
+          {{ currentDate | date : "long" : "GMT-4" }}
+        </li>
+      </ul>
+    </p-card>
+  </div>
 </div>

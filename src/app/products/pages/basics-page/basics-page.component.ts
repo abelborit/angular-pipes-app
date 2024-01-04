@@ -9,4 +9,6 @@ export class BasicsPageComponent {
   public nameLowercase: string = 'jagger emmet';
   public nameUppercase: string = 'JAGGER EMMET';
   public nameRandomStyle: string = 'JagGEr EmmET';
+
+  public currentDate: Date = new Date();
 }
