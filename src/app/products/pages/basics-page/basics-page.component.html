@@ -65,6 +65,23 @@
           <strong>Current Date | date : "long" : "GMT-4" ➡️</strong>
           {{ currentDate | date : "long" : "GMT-4" }}
         </li>
+        <li>
+          <!-- <strong>Current Date | date : "long" ➡️</strong> -->
+          <!-- {{ currentDate | date : "long" }} (Inglés por defecto) -->
+
+          <strong>Current Date | date : "long" : "en-US" ➡️</strong>
+          {{ currentDate | date : "long" : "en-US" }} (Inglés por defecto)
+        </li>
+        <li>
+          <!-- si está vacío el campo entonces toma la configuración por defecto de ese campo -->
+          <strong>Current Date | date : "long" : "" : "es-MX" ➡️</strong>
+          {{ currentDate | date : "long" : "" : "es-MX" }} (Español)
+        </li>
+        <li>
+          <!-- si está vacío el campo entonces toma la configuración por defecto de ese campo -->
+          <strong>Current Date | date : "long" : "" : "fr-CA" ➡️</strong>
+          {{ currentDate | date : "long" : "" : "fr-CA" }} (Francés)
+        </li>
       </ul>
     </p-card>
   </div>
