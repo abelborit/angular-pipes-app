@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-numbers-page',
+  selector: 'products-pages-numbers-page',
   templateUrl: './numbers-page.component.html',
-  styleUrls: ['./numbers-page.component.css']
+  styleUrls: ['./numbers-page.component.css'],
 })
-export class NumbersPageComponent {
-
-}
+export class NumbersPageComponent {}

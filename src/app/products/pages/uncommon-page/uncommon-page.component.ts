@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-uncommon-page',
+  selector: 'products-pages-uncommon-page',
   templateUrl: './uncommon-page.component.html',
-  styleUrls: ['./uncommon-page.component.css']
+  styleUrls: ['./uncommon-page.component.css'],
 })
-export class UncommonPageComponent {
-
-}
+export class UncommonPageComponent {}
