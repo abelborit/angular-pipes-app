@@ -38,7 +38,7 @@ PrimeNG:
 
 ### \* RECURSOS A USAR:
 
-- PrimeNG (v15.0.1): https://primeng.org/
+- PrimeNG (v15.0.1): https://www.primefaces.org/primeng-v14-lts/
   - `npm install primeng@15.0.1`
   - `npm install primeicons@6.0.1`
 - ejemplo
