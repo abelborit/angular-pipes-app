@@ -1,1 +1,100 @@
-<p>numbers-page works!</p>
+<p-panel header="Numbers Pipes" class="p-2">
+  <p>Pipes included in Angular, usually in the common module</p>
+</p-panel>
+
+<div class="grid">
+  <div class="col-12 md:col-6">
+    <p-card header="Pipe: number" subheader="Random Number">
+      <ul>
+        <li><strong>Currency ➡️ </strong>{{ totalTodaySells }}</li>
+        <li>
+          <strong>Currency | number ➡️ </strong>{{ totalTodaySells | number }}
+        </li>
+        <li>
+          <strong>Currency | number : "1.2-2" ➡️ </strong>
+          {{ totalTodaySells | number : "1.2-2" }} (dos decimales)
+        </li>
+        <li>
+          <strong>Currency | number : "1.4-4" ➡️ </strong>
+          {{ totalTodaySells | number : "1.4-4" }} (cuatro decimales)
+        </li>
+        <li>
+          <strong>Currency | number : "1.6-6" ➡️ </strong>
+          {{ totalTodaySells | number : "1.6-6" }} (seis decimales)
+        </li>
+      </ul>
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <p-card header="Pipe: percent" subheader="Random Number">
+      <ul>
+        <li><strong>Percent ➡️ </strong>{{ percentNumber }}</li>
+        <li>
+          <strong>percentNumber | percent ➡️ </strong>
+          {{ percentNumber | percent }}
+        </li>
+        <li>
+          <strong>percentNumber | percent : "1.1-1" ➡️ </strong>
+          {{ percentNumber | percent : "1.1-1" }}
+        </li>
+        <li>
+          <strong>percentNumber | percent : "1.2-2" ➡️ </strong>
+          {{ percentNumber | percent : "1.2-2" }}
+        </li>
+        <li>
+          <strong>percentNumber | percent : "1.4-4" ➡️ </strong>
+          {{ percentNumber | percent : "1.4-4" }}
+        </li>
+      </ul>
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-12">
+    <p-card header="Pipe: currency" subheader="Random Number">
+      <ul>
+        <li><strong>Currency ➡️ </strong>{{ totalBrutalSells }}</li>
+        <li>
+          <strong>Currency | currency ➡️ </strong>
+          {{ totalBrutalSells | currency }} (por defecto)
+        </li>
+        <br />
+        <li>
+          <strong>Currency | currency : "USD " ➡️ </strong>
+          {{ totalBrutalSells | currency : "USD " }} (dolares)
+        </li>
+        <li>
+          <!-- para el currencyCode  https://en.wikipedia.org/wiki/ISO_4217 -->
+          <strong>Currency | currency : "USD" : "symbol-narrow" ➡️ </strong>
+          {{ totalBrutalSells | currency : "USD" : "symbol-narrow" }} (dolares)
+        </li>
+        <li>
+          <!-- para el currencyCode  https://en.wikipedia.org/wiki/ISO_4217 -->
+          <strong>
+            Currency | currency : "USD" : "symbol-narrow" : "1.2-2" ➡️
+          </strong>
+          {{ totalBrutalSells | currency : "USD" : "symbol-narrow" : "1.2-2" }}
+          (dolares)
+        </li>
+        <br />
+        <li>
+          <strong>Currency | currency : "EUR " ➡️ </strong>
+          {{ totalBrutalSells | currency : "EUR " }} (euros)
+        </li>
+        <li>
+          <!-- para el currencyCode  https://en.wikipedia.org/wiki/ISO_4217 -->
+          <strong>Currency | currency : "EUR" : "symbol-narrow" ➡️ </strong>
+          {{ totalBrutalSells | currency : "EUR" : "symbol-narrow" }} (euros)
+        </li>
+        <li>
+          <!-- para el currencyCode  https://en.wikipedia.org/wiki/ISO_4217 -->
+          <strong>
+            Currency | currency : "EUR" : "symbol-narrow" : "1.6-6" ➡️
+          </strong>
+          {{ totalBrutalSells | currency : "EUR" : "symbol-narrow" : "1.6-6" }}
+          (euros)
+        </li>
+      </ul>
+    </p-card>
+  </div>
+</div>
