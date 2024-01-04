@@ -5,4 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './basics-page.component.html',
   styleUrls: ['./basics-page.component.css'],
 })
-export class BasicsPageComponent {}
+export class BasicsPageComponent {
+  public nameLowercase: string = 'jagger emmet';
+  public nameUppercase: string = 'JAGGER EMMET';
+  public nameRandomStyle: string = 'JagGEr EmmET';
+}
