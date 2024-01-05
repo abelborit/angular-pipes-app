@@ -1,1 +1,96 @@
-<p>uncommon-page works!</p>
+<p-panel header="Uncommon Pipes" class="p-2">
+  <p>Pipes included in Angular, usually in the common module</p>
+</p-panel>
+
+<div class="grid">
+  <div class="col-12 md:col-6">
+    <!-- i18n estamos hablando de sistemas de internacionalización. Es la forma abreaviada de internacionalización se pone la i del inicio luego 18 que son las 18 letras que hay entre la i y la n y por ultimo la n -->
+    <p-fieldset legend="Pipe: i18nSelect" [toggleable]="true">
+      <p>
+        Hola {{ name }}, es un placer
+        {{ gender | i18nSelect : invitationMap }} al evento.
+      </p>
+      <p-button (click)="handleChangeClient()" label="Change Person">
+      </p-button>
+    </p-fieldset>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <p-fieldset legend="Pipe: i18nPlural" [toggleable]="true">
+      <p>Actualmente {{ clients.length | i18nPlural : clientsMap }}</p>
+      <p-button (click)="removeClient()" label="Remove Client"></p-button>
+    </p-fieldset>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <p-fieldset legend="Pipe: Slice" [toggleable]="true">
+      <b>Original</b>
+      <pre>{{ namesArray }}</pre>
+
+      <b>slice : 0 : 2</b>
+      <pre>{{ namesArray | slice : 0 : 2 }}</pre>
+
+      <b>slice : 0 : 4</b>
+      <pre>{{ namesArray | slice : 0 : 4 }}</pre>
+
+      <b>slice : 1 : 2</b>
+      <pre>{{ namesArray | slice : 1 : 2 }}</pre>
+
+      <b>slice : 3 : 3</b>
+      <pre>{{ namesArray | slice : 3 : 3 }}(no muestra ningún valor)</pre>
+
+      <b>slice : 0 : -1</b>
+      <pre>{{ namesArray | slice : 0 : -1 }}</pre>
+
+      <b>slice : 0 : -2</b>
+      <pre>{{ namesArray | slice : 0 : -2 }}</pre>
+    </p-fieldset>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <p-fieldset legend="Pipe: Json" [toggleable]="true">
+      <!-- sería como usar un JSON.stringify() -->
+      {{ infoData | json }}
+      <hr />
+      <pre>{{ infoData | json }}</pre>
+    </p-fieldset>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <p-fieldset legend="Pipe: KeyValue" [toggleable]="true">
+      <pre>{{ personData | json }}</pre>
+      <hr />
+
+      <ul>
+        <li *ngFor="let item of personData | keyvalue : noSorting">
+          <b>{{ item.key | titlecase }}: </b>{{ item.value }}
+        </li>
+      </ul>
+    </p-fieldset>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <!-- la ventaja del Async Pipe es que nos permite abrir o escuchar un observable o promesa y cuando tenemos un valor lo muestra y cuando ya no lo vamos a utilizar porque vamos a cambiar a otra pantalla o el componente se va a destruir, entonces automáticamente hace la limpieza por nosotros y es como si tuviéramos un unsuscribe() -->
+    <p-fieldset legend="Pipe: Async" [toggleable]="true">
+      <!-- Si colocamos ambos pipes json y async veremos que solo cambia el de async pero no el de json porque al usar el pipe entonces lo trata como una instancia independiente, es como una suscripción independiente que realiza -->
+      <pre>{{ myObservableTimer | json }}</pre>
+      <pre *ngIf="!(myObservableTimer | async)">Resolviendo observable</pre>
+      <pre>{{ myObservableTimer | async }}</pre>
+
+      <hr />
+
+      <!-- en el código de arriba se ve por un momento en forma simultánea el mensaje de Resolviendo observable y los números porque las dos líneas de código que tienen a myObservableTimer lo hacen cada una por su cuenta, con este código hace que aparezca primero el mensaje de Resolviendo observable y después los números -->
+      <pre *ngIf="!(myObservableTimer | async); else observableTemplate">
+Resolviendo observable
+      </pre>
+      <ng-template #observableTemplate>
+        <pre> {{ myObservableTimer | async }} </pre>
+      </ng-template>
+
+      <hr />
+
+      <pre *ngIf="!(myPromiseValue | async)">Resolviendo promesa</pre>
+      <pre>{{ myPromiseValue | async }}</pre>
+    </p-fieldset>
+  </div>
+</div>
