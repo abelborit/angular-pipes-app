@@ -1,3 +1,108 @@
 <p-panel header="Custom Pipes" class="p-2">
-  <p>Custom Pipes</p>
+  <p>Custom Pipes created</p>
 </p-panel>
+
+<br />
+<br />
+
+<p-toolbar>
+  <div class="p-toolbar-group-start">
+    <!-- se puede utilizar el (onClick)="" que viene desde PrimeNG o sino el (click)="" que viene nativo del elemento button de HTML -->
+    <p-button
+      (onClick)="handleToggleUpperCase()"
+      label="ToggleCase"
+      icon="pi pi-search"
+    ></p-button>
+  </div>
+</p-toolbar>
+
+<div class="grid mt-2">
+  <div class="col-12">
+    <p-card header="Custom Pipe: toggleCase" [subheader]="dataToUse">
+      <p>
+        {{ dataToUse | toggleCase : true }}
+        <small>(el pipe utiliza el argumento true)</small>
+      </p>
+      <p>
+        {{ dataToUse | toggleCase : false }}
+        <small>(el pipe utiliza el argumento false)</small>
+      </p>
+      <p>
+        {{ dataToUse | toggleCase }}
+        <small>(el pipe utiliza el argumento por defecto)</small>
+      </p>
+      <p>
+        {{ dataToUse | toggleCase : isUpperCase }}
+        <small>(el pipe utiliza el argumento como valor dinámico)</small>
+      </p>
+    </p-card>
+  </div>
+</div>
+
+<br />
+<br />
+
+<p-toolbar>
+  <div class="p-toolbar-group-start">
+    <p-button
+      class="mr-4"
+      label="Por nombre"
+      icon="pi pi-sort"
+      styleClass="p-button-success"
+      (click)="handleSortBy('name')"
+    >
+    </p-button>
+
+    <p-button
+      class="mr-4"
+      label="Por volar"
+      icon="pi pi-sort"
+      styleClass="p-button-danger"
+      (click)="handleSortBy('canFly')"
+    >
+    </p-button>
+
+    <p-button
+      class="mr-4"
+      label="Por color"
+      icon="pi pi-sort"
+      styleClass="p-button-help"
+      (click)="handleSortBy('color')"
+    >
+    </p-button>
+  </div>
+</p-toolbar>
+
+<div class="grid">
+  <div class="col mt-2">
+    <p-panel header="Heroes">
+      <p-table
+        [value]="heroes | sortBy : toSortBy : toAscToDes"
+        [tableStyle]="{ 'min-width': '50rem' }"
+      >
+        <ng-template pTemplate="header">
+          <tr>
+            <th>Nombre</th>
+            <th>Puede Volar</th>
+            <th>Color</th>
+          </tr>
+        </ng-template>
+
+        <!-- aquí PrimeNG no utiliza el *ngFor pero utiliza una directiva personalizada que oculta el *ngFor usando, en este caso le colocamos let-hero, que significa que por cada elemento que tenga el let-hero se va a mostrar lo que tiene en el <tr>.....</tr>. Aquí no hay el autocompletado del intellisense porque de cierta forma estamos fuera de TypeScript por el uso del let-hero -->
+        <ng-template pTemplate="body" let-hero>
+          <tr>
+            <td>{{ hero.name }}</td>
+            <td>
+              {{ hero.canFly | canFly | titlecase }}
+              <small>({{ hero.canFly }})</small>
+            </td>
+            <td>
+              {{ hero.color | colorCase }}
+              <small>({{ hero.color }})</small>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </p-panel>
+  </div>
+</div>
