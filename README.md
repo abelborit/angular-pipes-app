@@ -24,11 +24,14 @@ Pipes Angular (https://angular.io/api?query=pipe):
 - KeyValue
 - Json
 - Async
+- Pipes personalizados
+  - Argumentos hacia los Pipes
 
 PrimeNG:
 
 - PrimeNG (v15.0.1)
 - Módulo especializado para módulos de PrimeNG
+- SortableTable manual y usando PrimeNg
 
 ### \* PASOS A REALIZAR:
 
