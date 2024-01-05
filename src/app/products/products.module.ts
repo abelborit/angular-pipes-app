@@ -7,12 +7,14 @@ import { ProductsRoutingModule } from './products-routing.module';
 import { BasicsPageComponent } from './pages/basics-page/basics-page.component';
 import { NumbersPageComponent } from './pages/numbers-page/numbers-page.component';
 import { UncommonPageComponent } from './pages/uncommon-page/uncommon-page.component';
+import { CustomPipePageComponent } from './pages/custom-pipe-page/custom-pipe-page.component';
 
 @NgModule({
   declarations: [
     BasicsPageComponent,
     NumbersPageComponent,
     UncommonPageComponent,
+    CustomPipePageComponent,
   ],
   imports: [CommonModule, ProductsRoutingModule, PrimeNgModule],
 })
