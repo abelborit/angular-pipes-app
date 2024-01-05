@@ -33,12 +33,6 @@ PrimeNG:
 - Módulo especializado para módulos de PrimeNG
 - SortableTable manual y usando PrimeNg
 
-### \* PASOS A REALIZAR:
-
-1. ejemplo
-2. ejemplo
-3. ejemplo
-
 ### \* RECURSOS A USAR:
 
 - PrimeNG (v15.0.1): https://www.primefaces.org/primeng-v14-lts/
@@ -46,8 +40,6 @@ PrimeNG:
   - `npm install primeicons@6.0.1`
 - PrimeFlex (3.3.0): https://primeflex.org/
   - `npm install primeflex@3.3.0`
-- ejemplo
-- ejemplo
 
 ---
 
